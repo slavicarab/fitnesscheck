@@ -29,6 +29,8 @@
 #fitnessForm > input{
     margin-bottom: 10px;
     background-color:rgb(252, 250, 247);
+    height: 30px;
+
 }
 
 #fitnessForm > label{
