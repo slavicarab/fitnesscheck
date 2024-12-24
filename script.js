@@ -1,6 +1,8 @@
-const form = document.getElementById('fitnessForm')
+const form = document.getElementById('fitnessForm');
 const result = document.getElementById('result');
 result.innerHTML = '';
+const history = document.getElementById('history');
+history.innerHTML= '';
 
 const firstNameE = document.getElementById('firstName');
 const lastNameE = document.getElementById('lastName');
@@ -163,22 +165,76 @@ function fitnessCheck(){
       const bmiCategory = getBMICategory(resultBmi, ageValue);
       const getBloodPressure = getBloodPressureCategory(systolic, diastolic);
       const bodyFatCategory = getBodyFatCategory(ageValue, bodyFat, gender);
-      const cssBloodPressureDot = getBloodPressure.replaceAll('.', '')
-      const cssBloodPressure = cssBloodPressureDot.replaceAll(' ', '')
-      const cssBodyFat = bodyFatCategory.replaceAll(' ', '')
+      const cssBloodPressureDot = getBloodPressure.replaceAll('.', '');
+      const cssBloodPressure = cssBloodPressureDot.replaceAll(' ', '');
+      const cssBodyFat = bodyFatCategory.replaceAll(' ', '');
+
+      //Saving in local storage
+
+      // Get the current date
+      const today = new Date();
+
+      // Extract day, month, and year
+      const day = today.getDate(); // Day of the month (1-31)
+      const month = today.toLocaleString('default', { month: 'long' }); // Full month name
+      const year = today.getFullYear(); // Four-digit year
+
+      // Format the date
+      const formattedDate = `${day} ${month} ${year}`;
+
+      //Creating an object
+      const resultHistory = {
+        BMI: bmiCategory,
+        blutDruckWert: getBloodPressure,
+        körperFettAnteil: bodyFatCategory,
+        datum: formattedDate
+      };
+
+      localStorage.setItem("resultHistory", JSON.stringify(resultHistory));
       
+    
+      //Showing results on the page
+
       form.style.display = 'none';
       result.innerHTML=`
       <p class ="${cssBodyFat}">Berechneter BMI:${bmiCategory}</p>
       <p class ="${cssBloodPressure}">Blutdruckwert:${getBloodPressure}</p>
       <p class ="${bodyFatCategory}">Körperfettanteil:${bodyFatCategory}</p>
-      <button onclick = "tryAgain()">Versuchen Sie noch ein mal</button>`
-}
+      <button onclick = "tryAgain()">Versuchen Sie noch ein mal</button>
+      <button onclick = "showHistory()">Ergebnisverlauf anzeigen</button>`  
+};
 
-//Button function
+//Retrieving results
+
+function getObjectFromLocalStorage() {
+  const objectString = localStorage.getItem("resultHistory");
+  if (objectString) {
+      const retrievedObject = JSON.parse(objectString);
+      return retrievedObject;
+  } else {
+      return null;
+  }
+};
+
+//Button try again
 
 function tryAgain(){
+  history.style.display = 'none';
   form.style.display = 'flex'
   result.style.display ='none'
-}
+};
+
+//Button showing history
+
+function showHistory(){
+  result.style.display = 'none';
+  const historyObject = getObjectFromLocalStorage()
+  history.innerHTML=`
+  <p>Datum:${historyObject.datum}</p>
+  <p>Berechneter BMI:${historyObject.BMI}</p>
+  <p>Blutdruckwert:${historyObject.blutDruckWert}</p>
+  <p>Körperfettanteil:${historyObject.körperFettAnteil}</p>
+   <button onclick = "tryAgain()">Versuchen Sie noch ein mal</button>
+  `
+};
 
