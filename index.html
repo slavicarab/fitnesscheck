@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Fitness Check</h1>
+      <form id="fitnessForm">
+        <label for="firstName">Vorname:</label>
+        <input type="text" id="firstName" name="firstName" required />
+
+        <label for="lastName">Nachname:</label>
+        <input type="text" id="lastName" name="lastName" required />
+
+        <label>Geschlecht:</label>
+        <div>
+          <input type="radio" id="male" name="gender" value="male" required />
+          <label for="male" id="male-label">Mannlich</label>
+        </div>
+        <div id="female-radio">
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+            checked
+          />
+          <label for="felame" id="female-label">Weiblich</label>
+        </div>
+
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" name="email" required />
+
+        <label for="age">Alter:</label>
+        <input type="number" id="age" name="age" min="1" max="120" />
+
+        <label for="height">Grosse (cm):</label>
+        <input type="number" id="height" name="height" min="50" max="250" />
+
+        <label for="weight">Gewicht (kg):</label>
+        <input type="number" id="weight" name="weight" min="1" max="250" />
+
+        <label for="bloodpressure">Blutdruck (systolisch):</label>
+        <input type="number" id="systolic" name="systolic" min="30" max="180" />
+
+        <label for="bloodpressure">Blutdruck (diastolisch):</label>
+        <input
+          type="number"
+          id="diastolic"
+          name="diastolic"
+          min="30"
+          max="180"
+        />
+
+        <label for="bodyFat">Körperfettanteil (%):</label>
+        <input type="number" id="bodyFat" name="bodyFat" min="1" max="100" />
+
+        <button type="button" id="sendInfo" onclick="fitnessCheck()">
+          Absenden
+        </button>
+      </form>
+
+      <div class="result" id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

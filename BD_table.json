@@ -1,0 +1,37 @@
+[
+    {
+        "category": "Niedriger Blutdruck",
+        "systolic": { "min": 0, "max": 105 },
+        "diastolic": { "min": 0, "max": 65 }
+    },
+    {
+        "category": "Optimaler Blutdruck",
+        "systolic": { "min": 90, "max": 120 },
+        "diastolic": { "min": 60, "max": 80 }
+    },
+    {
+        "category": "Normaler Blutdruck",
+        "systolic": { "min": 121, "max": 130 },
+        "diastolic": { "min": 81, "max": 85 }
+    },
+    {
+        "category": "Hochnormaler Blutdruck",
+        "systolic": { "min": 130, "max": 139 },
+        "diastolic": { "min": 86, "max": 89 }
+    },
+    {
+        "category": "Hypertonie 1. Grades",
+        "systolic": { "min": 140, "max": 159 },
+        "diastolic": { "min": 90, "max": 99 }
+    },
+    {
+        "category": "Hypertonie 2. Grades",
+        "systolic": { "min": 160, "max": 179 },
+        "diastolic": { "min": 100, "max": 109 }
+    },
+    {
+        "category": "Hypertonie 3. Grades",
+        "systolic": { "min": 180, "max": 300 },
+        "diastolic": { "min": 110, "max": 200 }
+    }
+]

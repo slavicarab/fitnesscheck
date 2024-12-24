@@ -1,0 +1,148 @@
+:root{
+    --resultpadding: 5px;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container > h1{
+    background-color: rgb(245, 240, 234);
+    color: rgb(83, 175, 83) ;
+    border-radius: 5px;
+    padding: 8px 20px;   
+}
+
+#fitnessForm{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+#fitnessForm > input{
+    margin-bottom: 10px;
+    background-color:rgb(252, 250, 247);
+}
+
+#fitnessForm > label{
+    color:rgb(83, 175, 83);
+    font-size: 1.2rem;   
+}
+
+#female-radio{
+    margin-bottom: 10px;
+}
+
+#female-label, #male-label{
+    color:rgb(83, 175, 83);
+    font-size: 1rem;
+   
+}
+
+button{
+    border-radius: 8px;
+    background-color: rgb(245, 240, 234);
+    color: rgb(83, 175, 83);
+    padding: 8px;
+    font-weight: 600;
+    width: 100%;
+    font-size: 1rem;  
+}
+ 
+.athletes{
+    padding: var(--resultpadding);
+    border: solid 2px green;
+}
+
+.fitness{
+    padding: var(--resultpadding);
+   border: solid 2px greenyellow;
+}
+.average{
+    padding: var(--resultpadding);
+    border: solid 2px orange;
+}
+
+.obese{
+    padding: var(--resultpadding);
+    border: solid 2px red;
+}
+
+.essentialFat{
+    padding: var(--resultpadding);
+    border: solid 2px yellow;
+}
+
+.NiedrigerBlutdruck{
+    padding: var(--resultpadding);
+    border: solid 2px rgb(218, 218, 39);
+}
+
+.OptimalerBlutdruck{
+    padding: var(--resultpadding);
+    border: solid 2px green;
+}
+
+.NormalerBlutdruck{
+    padding: var(--resultpadding);
+    border: solid 2px greenyellow;
+
+}
+
+.HochnormalerBlutdruck{
+    padding: var(--resultpadding);
+    border: solid 2px orange;
+}
+
+.Hypertonie1Grades{
+    padding: var(--resultpadding);
+    border: solid 2px rgb(235, 93, 93);
+}
+
+.Hypertonie2Grades{
+    padding: var(--resultpadding);
+    border: solid 2px rgb(240, 54, 54);
+}
+
+.Hypertonie3Grades{
+    padding: var(--resultpadding);
+    border: solid 2px rgb(173, 15, 15);
+}
+
+.Untergewicht{
+    padding: var(--resultpadding);
+    border: solid 2px rgb(218, 218, 39);
+}
+
+.Normalgewicht{
+    padding: var(--resultpadding);
+    border: solid 2px green
+
+}
+
+.Übergewicht{
+    padding: var(--resultpadding);
+    border: solid 2px red
+
+}
+
+.Adipositas{
+    padding: var(--resultpadding);
+    border: solid 2px rgb(192, 35, 35)
+
+}
+
+.starkeAdipositas{
+    padding: var(--resultpadding);
+    border: solid 2px rgb(153, 16, 16)
+
+}
+

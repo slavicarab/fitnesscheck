@@ -1,0 +1,50 @@
+[
+    {
+        "ageRange": "18-25",
+        "essentialFat": { "min": 2, "max": 5 },
+        "athletes": { "min": 6, "max": 13 },
+        "fitness": { "min": 14, "max": 17 },
+        "average": { "min": 18, "max": 24 },
+        "obese": { "min": 25, "max": 100 }
+    },
+    {
+        "ageRange": "26-35",
+        "essentialFat": { "min": 2, "max": 5 },
+        "athletes": { "min": 6, "max": 14 },
+        "fitness": { "min": 15, "max": 18 },
+        "average": { "min": 19, "max": 25 },
+        "obese": { "min": 26, "max": 100 }
+    },
+    {
+        "ageRange": "36-45",
+        "essentialFat": { "min": 2, "max": 5 },
+        "athletes": { "min": 6, "max": 15 },
+        "fitness": { "min": 16, "max": 20 },
+        "average": { "min": 21, "max": 26 },
+        "obese": { "min": 27, "max": 100 }
+    },
+    {
+        "ageRange": "46-55",
+        "essentialFat": { "min": 2, "max": 5 },
+        "athletes": { "min": 6, "max": 16 },
+        "fitness": { "min": 17, "max": 21 },
+        "average": { "min": 22, "max": 27 },
+        "obese": { "min": 28, "max": 100 }
+    },
+    {
+        "ageRange": "56-65",
+        "essentialFat": { "min": 2, "max": 5 },
+        "athletes": { "min": 6, "max": 17 },
+        "fitness": { "min": 18, "max": 22 },
+        "average": { "min": 23, "max": 28 },
+        "obese": { "min": 29, "max": 100 }
+    },
+    {
+        "ageRange": "65+",
+        "essentialFat": { "min": 2, "max": 5 },
+        "athletes": { "min": 6, "max": 18 },
+        "fitness": { "min": 19, "max": 23 },
+        "average": { "min": 24, "max": 29 },
+        "obese": { "min": 30, "max": 100 }
+    }
+]
